@@ -37,7 +37,7 @@ def get_temperature(year, day_of_year):
         print("Error: Year and/or day of year not available in queried data")
         return None
 
-def photoperiod_func(day_of_year, version = 2):
+def photoperiod_func(day_of_year, version = 1):
     if version == 1:
         return(p_array[day_of_year - 1] / p_start)
     
@@ -62,8 +62,14 @@ def update_senescence(year, day_of_year):
         s_array[day_of_year - 1] = s_array[day_of_year - 2] + rate_senescence(year, day_of_year)
 
 year = 2022
+printed_y90 = False
+y_crit = 5160
 for doy in range(170, 366):
     update_senescence(year, doy)
-    print("Updated senescene")
+    # print("Updated senescence")
+    if s_array[doy - 1] > y_crit and not printed_y90:
+        print(doy)
+        printed_y90 = True
 
-print(s_array[170:])
+plt.plot(s_array)
+plt.show()
