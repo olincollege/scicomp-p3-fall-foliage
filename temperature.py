@@ -11,8 +11,8 @@ def get_data():
 	# Define requests URL and parameters
 	url = "https://archive-api.open-meteo.com/v1/archive"
 	params = {
-		"latitude": 42.2930153,
-		"longitude": -71.2663569,
+		"latitude": 42.53169917668065, 
+		"longitude": -72.1899469241446,
 		"start_date": start_date,
 		"end_date": end_date,
 		"daily": "temperature_2m_mean"
