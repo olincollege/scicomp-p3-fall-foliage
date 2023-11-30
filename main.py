@@ -1,6 +1,7 @@
 import pandas as pd
 import matplotlib.pyplot as plt
 from tree import Tree_Specific
+import numpy as np
 
 params = pd.read_csv("params.csv")
 p = params.iloc[0].tolist()

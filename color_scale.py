@@ -1,5 +1,7 @@
 import pygame as pg
 # from pyg.locals import *
+# Pygame defines colors using RGB - can scale numbers by value
+# Matplotlib heatmap
 
 def main():
     pg.init()
