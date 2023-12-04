@@ -1,18 +1,15 @@
 import openmeteo_requests
 import pandas as pd
 
-start_date = "2003-01-01"
-end_date = "2023-11-12"
-
-def get_data():
+def get_data(latitude, longitude, start_date, end_date):
 	# Create client for server request
 	openmeteo = openmeteo_requests.Client()
 
 	# Define requests URL and parameters
 	url = "https://archive-api.open-meteo.com/v1/archive"
 	params = {
-		"latitude": 42.53169917668065, 
-		"longitude": -72.1899469241446,
+		"latitude": latitude, 
+		"longitude": longitude,
 		"start_date": start_date,
 		"end_date": end_date,
 		"daily": "temperature_2m_mean"
