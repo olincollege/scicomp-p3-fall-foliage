@@ -184,7 +184,7 @@ class TreeView:
         self.color_model.update_senescence(day_of_year)
         self.fall_model.update_senescence(day_of_year)
 
-    def draw_tree(self, x, y, day_of_year, show_fall = True):
+    def draw_tree(self, x, y, day_of_year, show_fall = False):
         """
         Draws the tree on the screen at the specified coordinates for a given day of the year.
 
